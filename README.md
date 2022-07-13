@@ -19,3 +19,8 @@ Project with some basic examples of chevron (the Python implementation of the mu
 > chevron is fast, pep8, spec compliant and Python 2 and 3 compatible
 
 [Chevron GitHub project](https://github.com/noahmorrison/chevron)
+
+## IDEA plugin
+This plugin can be used in PyCharm and supports the Mustache template language.
+
+[Mustache IDEA plugin](https://plugins.jetbrains.com/plugin/6884-handlebars-mustache)
