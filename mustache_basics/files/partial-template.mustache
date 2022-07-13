@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Nationality</th>
+    </tr>
+    {{#people}}
+        <tr>
+            <td>{{#to_uppercase}}{{name}}{{/to_uppercase}}</td> {{! Lambdas }}
+            <td>{{age}}</td>
+            <td>{{nationality}}</td>
+        </tr>
+    {{/people}}
+</table>

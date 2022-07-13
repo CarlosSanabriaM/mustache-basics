@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Simple variable }}
+    <title>{{title}}</title>
+    {{! Simple variable (unescaped HTML) }}
+    {{{html_meta_tag}}}
+    {{! Non existing variable }}
+    {{{non_existing_var}}}
+</head>
+
+<body>
+
+{{! Simple variable }}
+<h1>{{title}}</h1>
+
+{{! Sections }}
+{{#section}}
+    <section>
+        <h2>{{title}}</h2>
+        <p>{{paragraph}}</p>
+    </section>
+{{/section}}
+
+{{! Partials }}
+{{> partial-template}}
+
+{{! Value is non-false but not a list }}
+{{#link}}
+    <a href="{{url}}">{{text}}</a>
+{{/link}}
+
+{{! Inverted Sections }}
+{{^promotion}}
+  <p>Currently there are no active promotions :(</p>
+{{/promotion}}
+
+{{! The following blocks will not be rendered}}
+
+{{#non_existing_key}}
+    <p>This block will not be rendered</p>
+{{/non_existing_key}}
+
+{{#empty_list}}
+    <p>This block will not be rendered</p>
+{{/empty_list}}
+
+{{#false_value}}
+    <p>This block will not be rendered</p>
+{{/false_value}}
+
+</body>
+</html>
